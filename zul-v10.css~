@@ -1,7 +1,37 @@
 /* CSS declarations go here */
 
 
-div.centered {
-	margin-left: 700px;
+h1.logo
+{
+    background: url("../images/LOGO.gif") no-repeat scroll transparent;
+    padding: 70px 0 0 100px;
+    width: 580px;
+	height: 170px;
+}
+input.butt
+{
+		background-color: #3366FF;
+		border-bottom:solid;
+		border-left: #FFEEEE;
+		border-right:solid;
+		border-top: #EEEEEE;
+		color: black;
+		font-family: Verdana, Arial
+}
+input.button
+{
+margin-top:5px;
+margin-bottom:5px;
+margin-right:-1px;
+margin-left:780px;
+}
 
+textarea.locked
+{
+    resize: none;
+    
+}
+input.hidden
+{
+	visibility:hidden;
 }

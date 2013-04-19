@@ -7,6 +7,7 @@
         {{renderPage}}
 </body>
 <template name="body">
+
 </template>
 <template name="adminLayout">
   <h1>Admin Section</h1>
@@ -82,7 +83,7 @@
 </template>
 
 <template name="newbarPage">
- 
+  
    <div style="background: url(&quot;/images/BACKGROUND.jpg&quot;) no-repeat scroll 0% 0% transparent;text-align: center; margin: 0 auto; height: 1100px; width: 900px;">
 
 
@@ -93,13 +94,15 @@
 	<td>&nbsp;</td>
 </tr>
 </table>
-<input type="text" id="name" placeholder="Bar Name"> <br/><input type="text"  id="address" placeholder="address"> <br/>
-<input type="text" id="timeDuration" placeholder="time Duration"> <br/>
-<input type="text" id="min age" placeholder="min age"> <br/>
-<input type="text" id="logo" placeholder="logo"> <br/>
-<input type="text" id="images" placeholder="images"> <br/>
-<input type="text" id="phone" placeholder="phone"> <br/>
-<input  type="button" value="Add bar" id="addbarButton"/> </div>
+<input type="text" id="name" placeholder="Bar Name"> <p></p>
+<input type="text"  id="address" placeholder="address"> <p></p>
+<input type="text" id="timeDuration" placeholder="time Duration"><p></p>
+<input type="text" id="min age" placeholder="min age"> <p></p>
+<input type="text" id="phone" placeholder="phone"><p></p>
+<input  type="button" value="Add bar" id="addbarButton"/> <p></p>
+<input  type="button" style="display:none;" value="Upload Logo" id="uploadlogoButton"/> <p></p>
+<input  type="button" value="Add another bar.." id="anotherbarButton"/>
+</div>
 </div>
 </template>
 
