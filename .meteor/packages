@@ -12,3 +12,4 @@ accounts-password
 collection-api
 router
 backbone
+ejson

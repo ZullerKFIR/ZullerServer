@@ -80,15 +80,35 @@ if (Meteor.isClient) {
       NewBarPageEvents = {};
       NewBarPageEvents["click #addbarButton"] = function(){
                   var name,address,timeDuration,minAge,logo,phone,approved;
- 		  approved = true;
-                  
-		  name = $("#name").val();
-      		  address = $("#address").val();
-		  timeDuration = $("#timeDuration").val();
-		  minAge = $("#minAge").val();
-		  logo = $("#logo").val();
-		  phone = $("#password").val();
-
+ 		  													approved = true;
+														 	 	name = $("#name").val();
+												    address = $("#address").val();
+														  	timeDuration = $("#timeDuration").val();
+														  minAge = $("#minAge").val();
+														  //logo = $("#logo").val();
+														  phone = $("#password").val();
+														  	
+																Meteor.subscribe("Attractions");
+																var Cursors = Attractions.find({name: name});
+																var CurrParsed = Cursors.fetch();
+																if (CurrParsed.length == 0){
+																var GenInfo = {name : name, address : address, timeDuration : timeDuration, minAge : minAge, phone : phone};
+																var genValues = EJSON.stringify(GenInfo);
+																Attractions.insert(GenInfo,function(err){if (err != undefined) {
+																			 alert("Insertion failed for the following reason " + err);
+																																							 
+																			 
+																			 }
+																			 else
+																			 {alert("Bar Added");}
+																	
+																	 
+																	
+																																			
+																		
+																		});	}	else{alert("Bar cannot be added: Exists");}												
+																	
+																
 	}
 	
       Template.newbarPage.events(NewBarPageEvents);

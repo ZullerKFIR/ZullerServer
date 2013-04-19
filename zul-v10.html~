@@ -93,13 +93,12 @@
 	<td>&nbsp;</td>
 </tr>
 </table>
-<input type="text" id="name" placeholder="Bar Name"> <p></p>
-<input type="text"  id="address" placeholder="address"> <p></p>
-<input type="text" id="timeDuration" placeholder="time Duration"><p></p>
-<input type="text" id="min age" placeholder="min age"> <p></p>
-<input type="text" id="logo" placeholder="logo"><p></p>
-<input type="text" id="images" placeholder="images"><p></p>
-<input type="text" id="phone" placeholder="phone"><p></p>
+<input type="text" id="name" placeholder="Bar Name"> <br/><input type="text"  id="address" placeholder="address"> <br/>
+<input type="text" id="timeDuration" placeholder="time Duration"> <br/>
+<input type="text" id="min age" placeholder="min age"> <br/>
+<input type="text" id="logo" placeholder="logo"> <br/>
+<input type="text" id="images" placeholder="images"> <br/>
+<input type="text" id="phone" placeholder="phone"> <br/>
 <input  type="button" value="Add bar" id="addbarButton"/> </div>
 </div>
 </template>
