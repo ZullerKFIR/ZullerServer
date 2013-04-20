@@ -9,13 +9,7 @@
 <template name="body">
 
 </template>
-<template name="adminLayout">
-  <h1>Admin Section</h1>
-</template>
 
-<template name="userLayout">
-  <h1>User Section</h1>
-</template>
 
 
 
@@ -23,17 +17,6 @@
   <h1>Loading... Section</h1>
 </template>
 
-
-<template name="newbarLayout">
-  <h1>New Bar Section</h1>
-</template>
-
-
-
-<template name="getbarLayout">
-  <h1>Get Bar Section</h1>
-  {{renderPage}}
-</template>
 
 
 <template name="adminPage">
@@ -79,9 +62,26 @@
 	<td>&nbsp;</td>
 </tr>
 </table>
+{{#each Attractions}}
+<p>
+  	<ul>{{name}}
+  	<li>
+  	</li>
+  	 	<li>address: {{address}}
+  	</li>
+  	 	<li>timeDuration: {{timeDuration}}
+  	</li>
+  	 	<li>minAge: {{minAge}}
+  	</li>
+  	 	<li>phone: {{phone}}
+  	</li>
+  	 	<li>logo: {{logo}}
+  	</li>
+  	</ul>
+  	</p>
+{{/each}}
 </div>
 </template>
-
 <template name="newbarPage">
   
    <div style="background: url(&quot;/images/BACKGROUND.jpg&quot;) no-repeat scroll 0% 0% transparent;text-align: center; margin: 0 auto; height: 1100px; width: 900px;">
@@ -93,6 +93,7 @@
 	<td>&nbsp;</td>
 	<td>&nbsp;</td>
 </tr>
+
 </table>
 <input type="text" id="name" placeholder="Bar Name"> <p></p>
 <input type="text"  id="address" placeholder="address"> <p></p>
