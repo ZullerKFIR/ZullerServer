@@ -59,6 +59,42 @@
   ],
   "manifest": [
     {
+      "path": "static/images/cal_minus.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal_minus.gif",
+      "size": 48,
+      "hash": "16038194f7d6ed503f4fde783f1975f006d780a1"
+    },
+    {
+      "path": "static/images/cal_forward.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal_forward.gif",
+      "size": 57,
+      "hash": "ebb4a0983ee92e3794eaf8a532d3fea276e614f3"
+    },
+    {
+      "path": "static/images/cal_reverse.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal_reverse.gif",
+      "size": 57,
+      "hash": "24c28047a03c2cc5c23ed63f4903b72eab6b5a88"
+    },
+    {
+      "path": "static/images/cal.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal.gif",
+      "size": 127,
+      "hash": "7aa4192641b461916e16fc7701df444f65581aba"
+    },
+    {
       "path": "static/images/BACKGROUND.jpg",
       "where": "client",
       "type": "static",
@@ -66,6 +102,33 @@
       "url": "/images/BACKGROUND.jpg",
       "size": 760297,
       "hash": "0adb265f6ebdce267e3fefd6cbeba3ba5edfbe71"
+    },
+    {
+      "path": "static/images/cal_plus.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal_plus.gif",
+      "size": 47,
+      "hash": "8bf26d94743f781803d06d2b81e6688933b87660"
+    },
+    {
+      "path": "static/images/cal_fastreverse.gif",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/images/cal_fastreverse.gif",
+      "size": 63,
+      "hash": "cdbb16e74914488e34957649991f32a6ca2fd30b"
+    },
+    {
+      "path": "static/datetimepicker_css.js",
+      "where": "client",
+      "type": "static",
+      "cacheable": false,
+      "url": "/datetimepicker_css.js",
+      "size": 40328,
+      "hash": "aa311b0bf410dda3a85abc501743aacc54032e72"
     },
     {
       "path": "static_cacheable/packages/underscore/underscore.js",
@@ -711,9 +774,9 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/template.zul-v10.js?34338f4ac886067cc636a255fcb78bd948b2959a",
-      "size": 4006,
-      "hash": "34338f4ac886067cc636a255fcb78bd948b2959a"
+      "url": "/template.zul-v10.js?3a344e865faf07165f0487de6dcf53c822b291f4",
+      "size": 4213,
+      "hash": "3a344e865faf07165f0487de6dcf53c822b291f4"
     },
     {
       "path": "static_cacheable/zul-v10.js",
@@ -745,7 +808,7 @@
     {
       "path": "app.html",
       "where": "internal",
-      "hash": "59bb633b3764b399309d124917c7eba19f3925b9"
+      "hash": "c431b1350d271851268c17495268898570f228f9"
     }
   ]
 }
