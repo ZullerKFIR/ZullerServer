@@ -76,11 +76,11 @@
   	<option>{{name}}</option>>
 {{/each}}
 </select>
-<input type="text" id="name" placeholder="Bar Name" readonly="true"> <p></p>
-<b>כתובת: </b><input type="text"  size="25" value="2013-01-01 00:00" maxlength="25" id="address" placeholder="address" readonly="true"> <p></p>
-<b>timeDuration: </b><input type="text" id="timeDuration" placeholder="time Duration" readonly="true"><p></p>
-<b>גיל מינימלי: </b><input type="text" id="minAge" placeholder="min age" readonly="true"> <p></p>
-<b>טלפון: </b><input type="text" id="phone" placeholder="phone" readonly="true"><p></p>
+<input type="text" id="name" readonly="true"> <p></p>
+<b>כתובת: </b><input type="text"  size="25" value="2013-01-01 00:00" maxlength="25" id="address" readonly="true"> <p></p>
+<b>timeDuration: </b><input type="text" id="timeDuration" readonly="true"><p></p>
+<b>גיל מינימלי: </b><input type="text" id="minAge" readonly="true"> <p></p>
+<b>טלפון: </b><input type="text" id="phone" readonly="true"><p></p>
 <div id="logoContainer">&nbsp;</div>
 <input type="button" value="חזור לתפריט הראשי" onclick="document.location='/admin'"/>
 </p>
@@ -99,11 +99,11 @@
 </tr>
 
 </table>
-<b>שם בר: </b><input type="text" id="name" placeholder="Bar Name"> <p></p>
+<b>שם בר: </b><input type="text" id="name" > <p></p>
 <b>כתובת: </b><img style="cursor:pointer" onclick="NewCssCal(&quot;address&quot;,&quot;yyyyMMdd&quot;,&quot;arrow&quot;,true,&quot;24&quot;)" alt="" src="/images/cal.gif"><input type="text" size="25" value="2013-01-01 00:00" maxlength="25" id="address" placeholder="address"> <p></p>
-<b>timeDuration: </b><input type="text" id="timeDuration" placeholder="time Duration"><p></p>
-<b>גיל מינימלי: </b><input type="text" id="minAge" placeholder="min age"> <p></p>
-<b>טלפון: </b><input type="text" id="phone" placeholder="phone"><p></p>
+<b>timeDuration: </b><input type="text" id="timeDuration" ><p></p>
+<b>גיל מינימלי: </b><input type="text" id="minAge" > <p></p>
+<b>טלפון: </b><input type="text" id="phone"><p></p>
 <input  type="button" value="הוסף בר" id="addbarButton"/> <p></p>
 <input  type="button" style="display:none;" value="העלאת לוגו" id="uploadlogoButton"/> <p></p>
 <input  type="button" value="הוסף בר חדש" id="anotherbarButton"/>

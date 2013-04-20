@@ -55,7 +55,8 @@
     "app/packages/backbone/backbone.js",
     "app/packages/collection-api/collectionapi.js",
     "app/server/plus.js",
-    "app/zul-v10.js"
+    "app/zullerPageEvents.js",
+    "app/zullerPageRouting.js"
   ],
   "manifest": [
     {
@@ -774,18 +775,27 @@
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/template.zul-v10.js?3a344e865faf07165f0487de6dcf53c822b291f4",
-      "size": 4213,
-      "hash": "3a344e865faf07165f0487de6dcf53c822b291f4"
+      "url": "/template.zul-v10.js?04640afc46fea0d81cf69b4bcb9dfde3e5abc5f8",
+      "size": 4007,
+      "hash": "04640afc46fea0d81cf69b4bcb9dfde3e5abc5f8"
     },
     {
-      "path": "static_cacheable/zul-v10.js",
+      "path": "static_cacheable/zullerPageEvents.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/zul-v10.js?12a83cc8cf1c3d267702dc5d5827349c42658fdf",
-      "size": 5943,
-      "hash": "12a83cc8cf1c3d267702dc5d5827349c42658fdf"
+      "url": "/zullerPageEvents.js?e312d0a216f597e121b6e27fc732a0a34ad1c654",
+      "size": 9599,
+      "hash": "e312d0a216f597e121b6e27fc732a0a34ad1c654"
+    },
+    {
+      "path": "static_cacheable/zullerPageRouting.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/zullerPageRouting.js?3005800cf6dffccacc27c3fc38b2e9034fe03c0b",
+      "size": 1180,
+      "hash": "3005800cf6dffccacc27c3fc38b2e9034fe03c0b"
     },
     {
       "path": "static_cacheable/packages/accounts-ui/login_buttons.less.css",
@@ -808,7 +818,7 @@
     {
       "path": "app.html",
       "where": "internal",
-      "hash": "c431b1350d271851268c17495268898570f228f9"
+      "hash": "b5cc291b347263ae099587cf8da0c3621861afed"
     }
   ]
 }
