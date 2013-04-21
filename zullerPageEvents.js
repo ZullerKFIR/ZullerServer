@@ -1,4 +1,3 @@
-Attractions = new Meteor.Collection("Attractions");
 
 base64 = {};
 base64.PADCHAR = '=';
@@ -112,6 +111,9 @@ base64.encode = function(s) {
 
 
 if (Meteor.isClient) {
+	
+				Attractions = new Meteor.Collection("Attractions");
+				StreetsIL = new Meteor.Collection("StreetsIL");
     Session.set("newbar", undefined);
     Session.set("cloudedimage", undefined);
 				PageEvents = {};
@@ -142,14 +144,20 @@ if (Meteor.isClient) {
         Meteor.Router.to('/', true);
     }
     getBarPageEvents = {};
+    
     getBarPageEvents["click #getBarSelector"] = function () {
         var barSelector = $("#getBarSelector").val();
+        
         if (barSelector != "") {
             var cur = Attractions.findOne({
                 name: base64.encode(barSelector)
             });
             $("#name").val(base64.decode(cur["name"]));
-            $("#address").val(base64.decode(cur["address"]));
+            $("#citySelector").val(base64.decode(cur["address"]["city"]));
+            var streetName = base64.decode(cur["address"]["street"]);
+            $("#streetSelector").append("<option>" + streetName + "</option>");
+            $("#streetSelector").val(streetName);
+            $("#HouseNum").val(base64.decode(cur["address"]["streetNumber"]));
             $("#timeDuration").val(base64.decode(cur["timeDuration"]));
             $("#minAge").val(base64.decode(cur["minAge"]));
             $("#phone").val(base64.decode(cur["phone"]));
@@ -172,6 +180,21 @@ if (Meteor.isClient) {
         }
     }
     NewBarPageEvents = {};
+    NewBarPageEvents["click #citySelector"] = function () {
+    	   var city = $("#citySelector").val();
+    	   $("#streetSelector").html("");
+							var Streets = StreetsIL.find({cityname: city});
+        var count = 0;
+        Streets.forEach(function (streetvar) {
+            
+											streetvar["streets"].forEach(function (street) {
+                    
+            var StreetName = street;
+            $("#streetSelector").append("<option>" + StreetName + "</option>")
+            count++;
+         });
+        });
+					};
     NewBarPageEvents["click #uploadlogoButton"] = function () {
         var eee = Session.get("newbar");
         if (Session.get("newbar") != undefined) {
@@ -237,21 +260,32 @@ if (Meteor.isClient) {
         $('#logoContainer').html("&nbsp;");
         $("#name").attr("readonly", false);
         $("#address").attr("readonly", false);
+        $("#citySelector").attr("readonly", false);
+        $("#streetSelector").attr("readonly", false);
+        $("#HouseNum").attr("readonly", false);
         $("#timeDuration").attr("readonly", false);
         $("#minAge").attr("readonly", false);
         $("#phone").attr("readonly", false);
         $("#uploadlogoButton").hide();
         $("#name").val("");
+        $("#citySelector").val("");
+        $("#streetSelector").val("");
+        $("#HouseNum").val("");
         $("#address").val("");
         $("#timeDuration").val("");
         $("#minAge").val("");
         $("#phone").val("");
     };
+    
+    
     NewBarPageEvents["click #addbarButton"] = function () {
         var name, address, timeDuration, minAge, logo, phone, approved;
         approved = true;
         name = $("#name").val();
         address = $("#address").val();
+        city = $("#citySelector").val();
+        street = $("#streetSelector").val();
+        streetNumber = $("#HouseNum").val();
         timeDuration = $("#timeDuration").val();
         minAge = $("#minAge").val();
         phone = $("#phone").val();
@@ -263,9 +297,14 @@ if (Meteor.isClient) {
         });
         var CurrParsed = Cursors.fetch();
         if (CurrParsed.length == 0) {
+        	   var address = {
+        	   						city : base64.encode(city), 
+        	   						street : base64.encode(street),
+        	   						streetNumber : base64.encode(streetNumber)
+        	   					}
             var GenInfo = {
                 name: base64.encode(name),
-                address: base64.encode(address),
+                address: address,
                 timeDuration: base64.encode(timeDuration),
                 minAge: base64.encode(minAge),
                 phone: base64.encode(phone),
@@ -284,6 +323,9 @@ if (Meteor.isClient) {
                     $("#uploadlogoButton").show();
                     $("#name").attr("readonly", "readonly");
                     $("#address").attr("readonly", "readonly");
+                    $("#citySelector").attr("readonly", "readonly");
+                    $("#streetSelector").attr("readonly", "readonly");
+                    $("#HouseNum").attr("readonly", "readonly");
                     $("#timeDuration").attr("readonly", "readonly");
                     $("#minAge").attr("readonly", "readonly");
                     $("#phone").attr("readonly", "readonly");
@@ -302,8 +344,18 @@ if (Meteor.isClient) {
 
 
     }
+    
     Template.getbarPage.events(getBarPageEvents);
     Template.newbarPage.events(NewBarPageEvents);
     Template.adminPage.events(AdminPageEvents);
     Template.userPage.events(PageEvents);
+    
+    //Template.newbarPage.cities = function() { return StreetsIL.find(base64.encode($("#citySelector").val()))}; 
+    
+    
+    //Handlebars.registerHelper('arrayify',function(obj){
+    //result = [];
+    //for (var key in obj) result.push({name:base64.decode(key)});
+    //return result;
+				//});
 }
