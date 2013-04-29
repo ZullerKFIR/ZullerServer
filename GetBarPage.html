@@ -1,0 +1,37 @@
+
+<template name="getbarPage">
+		<script src="datetimepicker_css.js"></script>
+  <div style="direction: rtl;background: url(&quot;/images/BACKGROUND.jpg&quot;) no-repeat scroll 0% 0% transparent;text-align: center; margin: 0 auto; height: 1100px; width: 900px;">
+
+
+<table style="height: 420px;">
+<tr>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+</tr>
+</table>
+
+
+<p>
+<select id="getBarSelector">
+<option></option>>
+{{#each Attractions}}
+  	<option>{{name}} </option>>
+{{/each}}
+</select>
+<input type="text" id="name" readonly="true"> <p></p>
+<select id="citySelector">
+<select id="citySelector">
+{{> cities}}
+</select>
+<select id="streetSelector">
+
+</select>
+<b>מספר בית:</b><input size="7" maxlength="7" type="text" id="HouseNum" >
+<b>טלפון: </b><input type="text" id="phone" readonly="true"><p></p>
+<div id="logoContainer">&nbsp;</div>
+<input type="button" value="חזור לתפריט הראשי" onclick="document.location='/admin'"/>
+</p>
+</div>
+</template>

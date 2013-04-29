@@ -54,9 +54,12 @@
     "app/packages/router/lib/router_common.js",
     "app/packages/backbone/backbone.js",
     "app/packages/collection-api/collectionapi.js",
-    "app/server/plus.js",
-    "app/zullerPageEvents.js",
-    "app/zullerPageRouting.js"
+    "app/server/A_Aplus.js",
+    "app/A_UtillsBase64.coffee.js",
+    "app/B_Attraction.coffee.js",
+    "app/D_dbFrameWork.coffee.js",
+    "app/zullerPageEvents.coffee.js",
+    "app/zullerPageRouting.coffee.js"
   ],
   "manifest": [
     {
@@ -771,31 +774,94 @@
       "hash": "1df255693a6e177bd5e34c984badbc758eea8397"
     },
     {
-      "path": "static_cacheable/template.zul-v10.js",
+      "path": "static_cacheable/template.GetBarPage.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/template.zul-v10.js?04640afc46fea0d81cf69b4bcb9dfde3e5abc5f8",
-      "size": 4007,
-      "hash": "04640afc46fea0d81cf69b4bcb9dfde3e5abc5f8"
+      "url": "/template.GetBarPage.js?73d2b0b3af4298486e7ba481e8154d0828f7bc60",
+      "size": 1166,
+      "hash": "73d2b0b3af4298486e7ba481e8154d0828f7bc60"
     },
     {
-      "path": "static_cacheable/zullerPageEvents.js",
+      "path": "static_cacheable/template.adminPage.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/zullerPageEvents.js?e312d0a216f597e121b6e27fc732a0a34ad1c654",
-      "size": 9599,
-      "hash": "e312d0a216f597e121b6e27fc732a0a34ad1c654"
+      "url": "/template.adminPage.js?41b345440949bed73ade4957e9ce2e4fa09de5b8",
+      "size": 652,
+      "hash": "41b345440949bed73ade4957e9ce2e4fa09de5b8"
     },
     {
-      "path": "static_cacheable/zullerPageRouting.js",
+      "path": "static_cacheable/template.extraTemplates.js",
       "where": "client",
       "type": "js",
       "cacheable": true,
-      "url": "/zullerPageRouting.js?3005800cf6dffccacc27c3fc38b2e9034fe03c0b",
-      "size": 1180,
-      "hash": "3005800cf6dffccacc27c3fc38b2e9034fe03c0b"
+      "url": "/template.extraTemplates.js?ab23cc5e7efb71bfabe36dbec667c6afaf4502ed",
+      "size": 41570,
+      "hash": "ab23cc5e7efb71bfabe36dbec667c6afaf4502ed"
+    },
+    {
+      "path": "static_cacheable/template.newbarPage.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/template.newbarPage.js?6aaf6caa81e9dff93a2a3e6aae8d7bedb27e0c64",
+      "size": 1188,
+      "hash": "6aaf6caa81e9dff93a2a3e6aae8d7bedb27e0c64"
+    },
+    {
+      "path": "static_cacheable/template.userPage.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/template.userPage.js?9d67c7163eb382a9b256c42fc7fa8f50710b39cd",
+      "size": 622,
+      "hash": "9d67c7163eb382a9b256c42fc7fa8f50710b39cd"
+    },
+    {
+      "path": "static_cacheable/A_UtillsBase64.coffee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/A_UtillsBase64.coffee.js?9373f5b0814057d97c4a4ad7c78f44031cfcdfc9",
+      "size": 2666,
+      "hash": "9373f5b0814057d97c4a4ad7c78f44031cfcdfc9"
+    },
+    {
+      "path": "static_cacheable/B_Attraction.coffee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/B_Attraction.coffee.js?838c259d3454f3103ec596ea6d002d0102050ad3",
+      "size": 1650,
+      "hash": "838c259d3454f3103ec596ea6d002d0102050ad3"
+    },
+    {
+      "path": "static_cacheable/D_dbFrameWork.coffee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/D_dbFrameWork.coffee.js?9c3e9d6e473aea148f5e2574d8a89c5566aef8ce",
+      "size": 1500,
+      "hash": "9c3e9d6e473aea148f5e2574d8a89c5566aef8ce"
+    },
+    {
+      "path": "static_cacheable/zullerPageEvents.coffee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/zullerPageEvents.coffee.js?f8cc37b8cee5d951cb8c2f54862610fc660d8a10",
+      "size": 10328,
+      "hash": "f8cc37b8cee5d951cb8c2f54862610fc660d8a10"
+    },
+    {
+      "path": "static_cacheable/zullerPageRouting.coffee.js",
+      "where": "client",
+      "type": "js",
+      "cacheable": true,
+      "url": "/zullerPageRouting.coffee.js?830a979af27a1e0f9bf657f93fb73a6b613e49fb",
+      "size": 1089,
+      "hash": "830a979af27a1e0f9bf657f93fb73a6b613e49fb"
     },
     {
       "path": "static_cacheable/packages/accounts-ui/login_buttons.less.css",
@@ -807,18 +873,18 @@
       "hash": "a6791c6bbc0dbffe1967f7603ad5e71a937da2f7"
     },
     {
-      "path": "static_cacheable/zul-v10.css",
+      "path": "static_cacheable/webstyles.css",
       "where": "client",
       "type": "css",
       "cacheable": true,
-      "url": "/zul-v10.css?a96e4fb39f82a4f54152af3aef469ba87a4965d0",
+      "url": "/webstyles.css?a96e4fb39f82a4f54152af3aef469ba87a4965d0",
       "size": 563,
       "hash": "a96e4fb39f82a4f54152af3aef469ba87a4965d0"
     },
     {
       "path": "app.html",
       "where": "internal",
-      "hash": "b5cc291b347263ae099587cf8da0c3621861afed"
+      "hash": "81245196af8c8690e6aa71c72bb2c6f9edbe728e"
     }
   ]
 }

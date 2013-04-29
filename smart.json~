@@ -1,0 +1,10 @@
+{
+  "packages": {
+    "collection-api": {},
+    "router": {},
+    "filepicker": {}
+  }
+  "my-experiment": {
+      "path": "A_UtillsBase64.js"
+   }
+}
