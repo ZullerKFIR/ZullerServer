@@ -1,19 +1,26 @@
 (->
+  dbAttraction = undefined
   dbConnection = undefined
+  dbConnection = new Meteor.Collection("Attractions")
   dbAttraction = ->
-    dbConnection = new Meteor.Collection("Attractions")
 
   dbAttraction::getInfoOfAttractionName = (barName) ->
-    cur = dbConnection.findOne(name: base64.encode(barName))
-    unless cur is `undefined`
+    city = undefined
+    cur = undefined
+    foundAttraction = undefined
+    houseNum = undefined
+    street = undefined
+    cur = dbConnection.findOne(name: Meteor.base64.encode(barName))
+    if cur isnt `undefined`
       foundAttraction = new Meteor.Attraction(barName)
-      city = base64.decode(cur["address"]["city"])
-      street = base64.decode(cur["address"]["street"])
-      houseNum = base64.decode(cur["address"]["streetNumber"])
+      city = Meteor.base64.decode(cur["address"]["city"])
+      street = Meteor.base64.decode(cur["address"]["street"])
+      houseNum = Meteor.base64.decode(cur["address"]["streetNumber"])
       foundAttraction.setAddress city, street, houseNum
-      foundAttraction.setPhone base64.decode(cur["phone"])
-      foundAttraction.setMinAge base64.decode(cur["minAge"])
-      foundAttraction.setLogo base64.decode(cur["logo"])
+      foundAttraction.setPhone Meteor.base64.decode(cur["phone"])
+      foundAttraction.setMinAge Meteor.base64.decode(cur["minAge"])
+      if cur["logo"] isnt `undefined`
+          foundAttraction.setLogo Meteor.base64.decode(cur["logo"])
       foundAttraction
     else
       `undefined`

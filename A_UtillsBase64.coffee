@@ -49,7 +49,7 @@ base64.getbyte = (s, i) ->
   x
 
 base64.encode = (s) ->
-  throw "SyntaxError: Not enough arguments"  unless arguments_.length is 1
+  throw "SyntaxError: Not enough arguments"  unless arguments.length is 1
   s = unescape(encodeURIComponent(s))
   padchar = base64.PADCHAR
   alpha = base64.ALPHA
@@ -78,3 +78,4 @@ base64.encode = (s) ->
       b10 = (getbyte(s, i) << 16) | (getbyte(s, i + 1) << 8)
       x.push alpha.charAt(b10 >> 18) + alpha.charAt((b10 >> 12) & 0x3F) + alpha.charAt((b10 >> 6) & 0x3f) + padchar
   x.join ""
+Meteor.base64 = base64
