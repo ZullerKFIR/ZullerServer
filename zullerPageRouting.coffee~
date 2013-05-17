@@ -22,5 +22,7 @@ if Meteor.isClient
   Meteor.Router.filters requireLogin: (page) ->
    if Meteor.user()
       page
+    else
+      "userPage"
 
   Meteor.Router.filter "requireLogin"
